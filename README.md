@@ -1,4 +1,5 @@
 # Japanese bidding document information extraction
+Extracted important information from Japanese bidding contracts with an average of 0.97 F1 scores by formulating the problem as a question answering task and utilizing **Transformer** to solve it.
 
 ### To train the models:
 
@@ -10,7 +11,7 @@ the most simple way to train the three models .
 
 #### Training arguments includes : seed, gpu, epochs, batch_size, lr, only_positive... Please refers to one of the training file to see all arguments.
 
-### Two steps training
+### Two steps training:
 If you want to do two steps training, please follow the instruction. (take albert as an example)
 
 1. train a model with only positive examples by setting only_positive to 1.
@@ -27,3 +28,11 @@ If you want to do two steps training, please follow the instruction. (take alber
 `bash download.sh`
 2. run test.py with a args which specify test data directory.
 e.g. `python test.py 'release/test/ca_data'`
+
+### Experiment plotting:
+![Image Not Found](/png/acc.png)
+
+### Summary:
+Please refer to "Report.pdf" or see the video summarization linked below.
+<br/>
+[![Image Not Found](http://img.youtube.com/vi/kl92dEIZnn8/1.jpg)](http://www.youtube.com/watch?v=kl92dEIZnn8 "Japanese Document Extraction")
